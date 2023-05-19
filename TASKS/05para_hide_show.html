@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        text-align: center;
+      }
+
+      div {
+        width: 300px;
+        border: 2px solid red;
+        margin: auto;
+        padding: 10px;
+        font-size: 20px;
+        background-color: lightsalmon;
+      }
+
+      p {
+        width: 250px;
+        margin: 20px auto;
+        text-align: justify;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p id="para">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque error
+        quod consectetur debitis quo aspernatur ducimus corporis at. Dolorum
+        voluptas autem nam praesentium nulla itaque veritatis architecto nemo
+        voluptatum! Nulla praesentium soluta harum tempora voluptatem tempore
+        iste odit, ad nesciunt dolores fuga obcaecati quaerat exercitationem
+        facere pariatur unde accusantium debitis. Lorem ipsum dolor sit, amet
+        consectetur adipisicing elit. Inventore omnis sapiente quidem nulla
+        corporis ipsum
+      </p>
+
+      <button onclick="hide()">Hide</button>
+      <button onclick="show()">Show</button>
+      <button onclick=" hide_show()">Hide-Show</button>
+    </div>
+
+    <script>
+      test = document.getElementById("para");
+
+      function hide() {
+        test.style.visibility = "hidden";
+      }
+
+      function show() {
+        test.style.visibility = "visible";
+      }
+
+      function hide_show() {
+        if (test.style.visibility == "hidden") {
+          test.style.visibility = "visible";
+        } else {
+          test.style.visibility = "hidden";
+        }
+      }
+    </script>
+  </body>
+</html>

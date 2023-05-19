@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display</title>
+  </head>
+  <body>
+    <h2 id="test">Namaste India</h2>
+
+    <script>
+      // ===>    Display any Content in Body
+
+      document.write("Hello94&% <u>happy</u>");
+
+      // ===>    Display any Content in Console
+
+      console.log("Hello94&% <u>happy</u>"); // --->   " " Ma jevu Hoy Evu j Render Thay
+
+      // ===> Display in any TAG
+
+      document.getElementById("test"); // --->   Aakhu Element = <h2>Contant</h2>
+
+      console.log(document.getElementById("test")); // --->   " " Ma Na Hoy To je Command Hoy Te Command Ne CALL Karse
+
+      //   ===>
+
+      document.getElementById("test").innerHTML = "Hello";
+
+      //   ===>
+
+      document.getElementById("test").innerText = "Hello";
+
+      //   ===>
+
+      document.getElementById("test").innerHTML =
+        "Hello World <u>Jay Mataji</u>";
+
+      //   ===>
+
+      document.getElementById("test").innerText =
+        "Hello World <u>Jay Mataji</u>";
+
+    </script>
+  </body>
+</html>

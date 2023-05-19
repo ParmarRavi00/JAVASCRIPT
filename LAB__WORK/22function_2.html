@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .abc {
+        font-size: 100px;
+        color: blue;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="idea" onclick="effect()" ondblclick="remove()"></h1>
+
+    <script>
+      document.getElementById("idea").innerHTML = "Hello Everyone";
+
+      title = document.getElementById("idea");
+
+      function effect() {
+        /* title.style.color = "red";
+        title.style.fontSize = "100px";
+        title.style.fontStyle = "italic"; */
+
+        // title.classList.add("abc");
+        title.className = "abc";
+      }
+
+      function remove() {
+        title.classList.remove("abc");
+      }
+    </script>
+  </body>
+</html>

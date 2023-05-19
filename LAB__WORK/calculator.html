@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+      }
+      .calculator {
+        width: 350px;
+        height: 300px;
+        border: 2px solid black;
+        text-align: center;
+        padding: 20px;
+        background-color: lightblue;
+      }
+
+      .value1,
+      .value2,
+      .result {
+        /* display: block; */
+        width: 80%;
+        height: 25px;
+        margin-top: 20px;
+        font-size: 20px;
+        outline: none;
+        text-align: center;
+      }
+
+      .operation {
+        width: 40%;
+        height: 25px;
+        margin-top: 20px;
+        font-size: 20px;
+        outline: none;
+      }
+      button {
+        width: 100px;
+        height: 25px;
+        margin: 20px 0px 0px;
+        font-size: 17px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calculator">
+      <input
+        id="value1"
+        class="value1"
+        type="text"
+        placeholder="Please Enter Value"
+        pattern="[0-9]+"
+      />
+
+      <input type="text" id="operation" class="operation" name="op" />
+
+      <input
+        id="value2"
+        class="value2"
+        type="text"
+        placeholder="Please Enter Value"
+        pattern="[0-9]+"
+      />
+
+      <button onclick="cal()">Calculate</button>
+      <button>Reset</button>
+
+      <input id="result" type="text" class="result" placeholder="Result" />
+    </div>
+
+    <script>
+      function cal() {
+        var value1 = parseFloat(document.getElementById("value1").value);
+
+        var operation = document.getElementById("operation").value;
+
+        var value2 = parseFloat(document.getElementById("value2").value);
+
+        var res = "";
+
+        if (operation == "+") {
+          res = value1 + value2;
+        } else if (operation == "-") {
+          res = value1 - value2;
+        } else if (operation == "*") {
+          res = value1 * value2;
+        } else if (operation == "/") {
+          res = value1 / value2;
+        } else if (operation == "%") {
+          res = value1 % value2;
+        } else document.write("Please Select Operation :");
+
+        document.getElementById("result").value = res;
+      }
+
+      //   console.log(value2);
+    </script>
+  </body>
+</html>

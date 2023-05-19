@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="" alt="" id="i1" height="250px" width="200px" />
+    <img src="" alt="" id="i2" height="250px" width="200px" />
+    <img src="" alt="" id="i3" height="250px" width="200px" />
+
+    <br />
+    <br />
+
+    <button onclick="show()">Show</button>
+    <button onclick="change()">Change</button>
+    <button onclick="changeagain()">Change Again</button>
+
+    <script>
+      t1 = document.getElementById("i1");
+      t2 = document.getElementById("i2");
+      t3 = document.getElementById("i3");
+
+      //   console.log(t1);
+
+      t2.src = "i2.jpg";
+      t3.src = "i3.jpg";
+
+      function show() {
+        t1.src = "i1.jpg";
+      }
+
+      function change() {
+        t2.src = "i2_2.jpg";
+      }
+
+      //   document.write(t2.src);
+
+      /* function changeagain() {
+        if (t3.src == "http://127.0.0.1:5500/i3.jpg") {
+          t3.src = "http://127.0.0.1:5500/i2.jpg";
+        } else {
+          t3.src = "http://127.0.0.1:5500/i3.jpg";
+        }
+      } */
+
+      //   ==> "==" Ye Aakha Path ne Match kare chhe
+
+      // ==> Jyare "Match" Ye Only Image ne j Match Kare Chhe
+
+      function changeagain() {
+        if (t3.src.match("i3.jpg")) {
+          t3.src = "i4.jpg";
+        } else {
+          t3.src = "i3.jpg";
+        }
+      }
+    </script>
+  </body>
+</html>

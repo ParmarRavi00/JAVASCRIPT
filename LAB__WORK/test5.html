@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .abc {
+        font-size: 100px;
+        color: blue;
+        font-style: italic;
+        text-decoration-line: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="head"></h1>
+
+    <script>
+      document.getElementById("head").innerHTML = "Hello Yara";
+
+      something = document.getElementById("head");
+
+      something.style.color = "red";
+      something.style.fontSize = "100px";
+      something.style.fontStyle = "italic";
+
+      // something.classList.add("abc");
+
+      // something.className = "abc";
+    </script>
+  </body>
+</html>

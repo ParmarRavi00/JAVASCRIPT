@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .abc {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="h"></h1>
+    <script>
+      var A = prompt("Please Enter Value A : ");
+
+      var B = prompt("Please Enter Value B : ");
+
+      var C = prompt("Please Enter Value C : ");
+
+      var cal1 = A > B ? A : B;
+
+      cal2 = cal1 > C ? cal1 : C;
+
+      // cal3 = cal3 > D ? cal3 : D;
+
+      // final = document.write(cal2);
+
+      document.getElementById("h").innerHTML = cal2;
+
+      document.getElementById("h").style.backgroundColor = "yellow";
+      document.getElementById("h").style.display = "inline-block";
+    </script>
+  </body>
+</html>

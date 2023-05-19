@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- NaN :NOT A NUMBER -->
+
+    <!-- Jyare 1-NUMBER Value And 2-STRING Value Vachhe Operation Karaviye Tyare NaN ERROR Aave Chhe -->
+
+    <!-- ONLY "+" Ne Bad Karta :- Karan Ke + Ne te Operation Sivay JOINT pan samaje Chhe -->
+    <label for="">Price: </label>
+    <input type="text" id="price" value="" />
+
+    <label for="">Quantity</label>
+    <select name="" id="quantity">
+      <option hidden value="">Quantity</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+
+    <button onclick="abc()">Get Price</button>
+
+    <label for="">Total Price: </label>
+    <input type="text" id="t_price" value="" />
+
+    <script>
+      // var p = document.getElementById("price").value;
+
+      // var q = Number(document.getElementById("quantity").value);
+
+      // document.write(typeof p);
+
+      function abc() {
+        var p = document.getElementById("price").value;
+
+        var q = document.getElementById("quantity").value;
+
+        var total = "";
+
+        /* if (q == "1") {
+          total = p * q;
+        }
+        if (q == "2") {
+          total = p * q;
+        }
+        if (q == "3") {
+          total = p * q;
+        }
+        if (q == "4") {
+          total = p * q;
+        }
+        if (q == "5") {
+          total = p * q;
+        } */
+
+        switch (q) {
+          case 1:
+            total = p * q;
+            break;
+
+          case 2:
+            total = p * q;
+            break;
+
+          case 3:
+            total = p * q;
+            break;
+
+          case 4:
+            total = p * q;
+            break;
+
+          case 5:
+            total = p * q;
+            break;
+
+          default:
+            document.write("Please Select Quantity: ");
+            break;
+        }
+
+        document.getElementById("t_price").value = total;
+      }
+
+      // console.log(total);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="test">Hello</h1>
+
+    <button onclick="change()">Change</button>
+    <button onclick="changeagain()">Change Again</button>
+    <button onclick="Keep()">Keep Changing</button>
+
+    <script>
+      t1 = document.getElementById("test");
+
+      //   console.log(t1);
+
+      function change() {
+        t1.innerHTML = "Namaste";
+      }
+
+      function changeagain() {
+        t1.innerHTML = "Hello";
+      }
+
+      //   console.log(t1.innerHTML);
+
+      //   t1.innerHTML ==> Reason Karan Ke (t1) thi Element get thay jema Aapne Aakha Element ni Compare Nathi Karavani
+
+      // Aapne Only (t1) Element Ma lakhel Text Ne j Compare Karavanu Hovathi t1.innerHTML Aave
+
+      function Keep() {
+        if (t1.innerHTML == "Hello") {
+          t1.innerHTML = "Namaste";
+        } else {
+          t1.innerHTML = "Hello";
+        }
+      }
+    </script>
+  </body>
+</html>
