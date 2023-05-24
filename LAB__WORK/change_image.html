@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img src="" alt="" width="200px" height="250px" id="i1" />
+    <img src="" alt="" width="200px" height="250px" id="i2" />
+    <img src="" alt="" width="200px" height="250px" id="i3" />
+
+    <br />
+    <br />
+
+    <button onclick="show()">show</button>
+    <button onclick="change()">Change</button>
+    <button onclick="changeAgain()">Change Again</button>
+
+    <script>
+      img1 = document.getElementById("i1");
+      img2 = document.getElementById("i2");
+      img3 = document.getElementById("i3");
+
+      function show() {
+        img1.src = "i1.jpg";
+      }
+
+      img2.src = "i1.jpg";
+
+      function change() {
+        img2.src = "i2.jpg";
+      }
+
+      img3.src = "i2.jpg";
+
+      //   console.log(img3.src);
+
+      /* function changeAgain() {
+        if (img3.src == "http://127.0.0.1:5500/i2.jpg") {
+          img3.src = "http://127.0.0.1:5500/i3.jpg";
+        } else if (img3.src == "http://127.0.0.1:5500/i3.jpg") {
+          img3.src = "http://127.0.0.1:5500/i1.jpg";
+        } else {
+          img3.src = "http://127.0.0.1:5500/i2.jpg";
+        }
+      }*/
+
+      function changeAgain() {
+        if (img3.src.match("i2.jpg")) {
+          img3.src = "i3.jpg";
+        } else if (img3.src.match("i3.jpg")) {
+          img3.src = "i1.jpg";
+        } else {
+          img3.src = "i2.jpg";
+        }
+      }
+    </script>
+  </body>
+</html>

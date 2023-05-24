@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      User Name: <input type="text" id="u_name" />
+      <span id="u_span"></span>
+
+      <br />
+      <br />
+
+      Password: <input type="password" id="pwd" />
+      <span id="pwd_span"></span>
+
+      <br />
+      <br />
+
+      Confirm Password: <input type="password" id="c_pwd" />
+      <span id="cpwd_span"></span>
+
+      <br />
+      <br />
+
+      <input type="submit" onclick="return validate()" />
+    </form>
+
+    <script>
+      u_name = document.getElementById("u_name");
+      u_span = document.getElementById("u_span");
+
+      pwd = document.getElementById("pwd");
+
+      c_pwd = document.getElementById("c_pwd");
+
+      cpwd_span = document.getElementById("cpwd_span");
+
+      //   console.log(u_span);
+
+      function validate() {
+        if (u_name.value == "") {
+          //   alert("*User Name is Required...!!");
+          u_span.innerHTML = "*User Name is Required...!!";
+          u_span.style.color = "red";
+          return false;
+        } else {
+          u_span.innerHTML = "";
+        }
+
+        if (pwd.value == "") {
+          //   alert("*User Name is Required...!!");
+          pwd_span.innerHTML = "*Password is Required...!!";
+          pwd_span.style.color = "red";
+          return false;
+        } else {
+          pwd_span.innerHTML = "";
+        }
+
+        if (c_pwd.value == "") {
+          //   alert("*User Name is Required...!!");
+          cpwd_span.innerHTML = "*Password is NOT Match...!!";
+          return false;
+        } else {
+          cpwd_span.innerHTML = "";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -7,16 +7,62 @@
     <title>Document</title>
   </head>
   <body>
+    <input type="text" id="val1" />
+
+    <input type="text" id="val2" />
+
+    <select name="" id="operation" onchange="cal()">
+      <option value="">---Select Operation---</option>
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+      <option value="%">%</option>
+    </select>
+
+    <input type="text" id="res" />
+
+    <h2 id="err"></h2>
+
     <script>
-      // var a = parseInt(prompt("Enter A: "));
-      // var b = parseInt(prompt("Enter B: "));
+      val1 = document.getElementById("val1");
+      va2 = document.getElementById("val2");
+      ope = document.getElementById("operation");
+      //   err = document.getElementById("err");
 
-      var a = parseFloat(prompt("Enter A: "));
-      var b = parseFloat(prompt("Enter B: "));
+      //   console.log(typeof ope.value);
 
-      var c = a % b;
+      total = "";
 
-      document.write(c);
+      function cal() {
+        switch (ope.value) {
+          case "+":
+            total = parseFloat(val1.value) + parseFloat(val2.value);
+            break;
+
+          case "-":
+            total = parseFloat(val1.value) - parseFloat(val2.value);
+            break;
+
+          case "*":
+            total = parseFloat(val1.value) * parseFloat(val2.value);
+            break;
+
+          case "/":
+            total = parseFloat(val1.value) / parseFloat(val2.value);
+            break;
+
+          case "%":
+            total = parseFloat(val1.value) % parseFloat(val2.value);
+            break;
+
+          default:
+            document.getElementById("err").innerHTML = "Please Select Operator";
+            break;
+        }
+
+        document.getElementById("res").value = total;
+      }
     </script>
   </body>
 </html>

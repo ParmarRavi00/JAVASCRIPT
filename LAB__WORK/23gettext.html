@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <textarea name="" id="x" cols="30" rows="10" onkeyup="xyz()"></textarea>
+    <textarea name="" id="y" cols="30" rows="10"></textarea>
+
+    <script>
+      box_1 = document.getElementById("x");
+      box_2 = document.getElementById("y");
+
+      console.log(box_1.innerHTML);
+
+      function xyz() {
+        box_2.innerHTML = box_1.value;
+      }
+    </script>
+  </body>
+</html>

@@ -30,6 +30,8 @@
     <label for="">Total Price: </label>
     <input type="text" id="t_price" value="" />
 
+    <h2 id="err"></h2>
+
     <script>
       // var p = document.getElementById("price").value;
 
@@ -41,6 +43,8 @@
         var p = document.getElementById("price").value;
 
         var q = document.getElementById("quantity").value;
+
+        var err = document.getElementById("err");
 
         var total = "";
 
@@ -61,28 +65,28 @@
         } */
 
         switch (q) {
-          case 1:
+          case "1":
             total = p * q;
             break;
 
-          case 2:
+          case "2":
             total = p * q;
             break;
 
-          case 3:
+          case "3":
             total = p * q;
             break;
 
-          case 4:
+          case "4":
             total = p * q;
             break;
 
-          case 5:
+          case "5":
             total = p * q;
             break;
 
           default:
-            document.write("Please Select Quantity: ");
+            err.innerHTML = "Please Select Quantity: ";
             break;
         }
 
