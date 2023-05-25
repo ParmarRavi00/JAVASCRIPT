@@ -22,46 +22,57 @@
 
     <input type="text" id="res" />
 
+    <button onclick="cle()">Reset</button>
+
     <h2 id="err"></h2>
 
     <script>
-      val1 = document.getElementById("val1");
-      va2 = document.getElementById("val2");
-      ope = document.getElementById("operation");
-      //   err = document.getElementById("err");
+      // val1 = document.getElementById("val1");
 
-      //   console.log(typeof ope.value);
+      // val2 = document.getElementById("val2");
+
+      // ope = document.getElementById("operation");
 
       total = "";
 
+      // console.log(val1);
+
       function cal() {
-        switch (ope.value) {
+        switch (operation.value) {
           case "+":
-            total = parseFloat(val1.value) + parseFloat(val2.value);
+            total = Number(val1.value) + Number(val2.value);
             break;
 
           case "-":
-            total = parseFloat(val1.value) - parseFloat(val2.value);
+            total = Number(val1.value) - Number(val2.value);
             break;
 
           case "*":
-            total = parseFloat(val1.value) * parseFloat(val2.value);
+            total = Number(val1.value) * Number(val2.value);
             break;
 
           case "/":
-            total = parseFloat(val1.value) / parseFloat(val2.value);
+            total = Number(val1.value) / Number(val2.value);
             break;
 
           case "%":
-            total = parseFloat(val1.value) % parseFloat(val2.value);
+            total = Number(val1.value) % Number(val2.value);
             break;
 
           default:
-            document.getElementById("err").innerHTML = "Please Select Operator";
+            document.getElementById("err").innerHTML =
+              "Please Select Operation";
             break;
         }
 
         document.getElementById("res").value = total;
+      }
+
+      function cle() {
+        val1.value = "";
+        val2.value = "";
+        ope.value = "";
+        res.value = "";
       }
     </script>
   </body>
