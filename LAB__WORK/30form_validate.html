@@ -63,9 +63,20 @@
         if (c_pwd.value == "") {
           //   alert("*User Name is Required...!!");
           cpwd_span.innerHTML = "*Password is NOT Match...!!";
+          cpwd_span.style.color = "red";
           return false;
         } else {
           cpwd_span.innerHTML = "";
+        }
+
+        if (c_pwd.value != pwd.value) {
+          //   alert("*User Name is Required...!!");
+          cpwd_span.innerHTML = "*Password is NOT Match...!!";
+          cpwd_span.style.color = "red";
+          return false;
+        } else {
+          cpwd_span.innerHTML = "";
+          return false;
         }
       }
     </script>
