@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    Name : <input type="text" id="nm" onblur="vali(nm, nm_err)" />
+
+    <span id="nm_err"></span>
+
+    <br />
+    <br />
+
+    Email : <input type="text" id="em" onblur="vali(em, em_err)" />
+
+    <span id="em_err"></span>
+
+    <script>
+      patt = /^[a-zA-Z]+$/;
+
+      function vali(x, y) {
+        if (x.value == "") {
+          y.innerHTML = "*Required....!";
+          y.style.color = "red";
+        } else if (!patt.test(nm.value)) {
+          y.innerHTML = " Onlay letters??";
+        } else {
+          y.innerHTML = "";
+        }
+      }
+    </script>
+  </body>
+</html>
