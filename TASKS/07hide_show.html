@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .container {
+        width: 800px;
+        height: 500px;
+        border: 2px solid black;
+        margin: auto;
+        display: flex;
+      }
+
+      .x {
+        border: 2px solid red;
+        width: 50%;
+        overflow: hidden;
+      }
+
+      .div_1 ul li {
+        font-size: 20px;
+        transition: 1s;
+      }
+
+      .div_2 {
+        position: relative;
+      }
+
+      .div_2 div {
+        height: 50%;
+        font-size: 18px;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        transition: 1s;
+        background-color: lightcyan;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="div_1 x">
+        <ul>
+          <li onclick="any()">
+            home
+            <div id="info_1">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+              debitis dignissimos in asperiores odio sit dolore accusantium, cum
+              modi eveniet assumenda quibusdam voluptate perspiciatis sequi
+              deleniti quam magnam aperiam voluptatibus numquam velit nulla
+              veritatis exercitationem soluta. Asperiores beatae corporis
+              consequuntur nesciunt ea quia dicta cum quo! Ut sapiente esse
+              voluptatum error optio iure sunt, nulla placeat omnis eius
+              assumenda, velit recusandae obcaecati consequuntur.
+            </div>
+          </li>
+          <li onclick="one()">
+            about
+            <div id="info_2">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo
+              debitis dignissimos in asperiores odio sit dolore accusantium, cum
+              ipsum.
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="div_2 x">
+        <div id="slide_1"></div>
+        <div id="slide_2"></div>
+      </div>
+    </div>
+
+    <script>
+      i1 = document.getElementById("info_1");
+
+      i1.style.height = "0px";
+      i1.style.overflow = "hidden";
+
+      s1 = document.getElementById("slide_1");
+
+      s1.innerHTML = i1.innerHTML;
+
+      s1.style.transform = "translateX(100%)";
+      s1.style.opacity = "0";
+
+      //   ------------------------------------------------
+
+      i2 = document.getElementById("info_2");
+
+      i2.style.height = "0px";
+      i2.style.overflow = "hidden";
+
+      s2 = document.getElementById("slide_2");
+
+      s2.innerHTML = i2.innerHTML;
+
+      s2.style.transform = "translateX(100%)";
+      s2.style.opacity = "0";
+
+      console.log(info_1);
+      function any() {
+        i1.style.height = "100%";
+        i1.style.overflow = "show";
+
+        s1.style.transform = "translateX(0%)";
+        s1.style.opacity = "1";
+
+        if ((i2.style.height = "100%")) {
+          i2.style.height = "0px";
+
+          if ((s2.style.transform = "translateX(0%)")) {
+            s2.style.transform = "translateX(100%)";
+          }
+        }
+      }
+
+      function one() {
+        i2.style.height = "100%";
+        i2.style.overflow = "show";
+
+        s2.style.transform = "translateX(0%)";
+        s2.style.opacity = "1";
+
+        if ((i1.style.height = "100%")) {
+          i1.style.height = "0px";
+
+          if ((s1.style.transform = "translateX(0%)")) {
+            s1.style.transform = "translateX(100%)";
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
