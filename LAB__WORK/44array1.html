@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="x" class="x">heading 1</h1>
+    <h1 id="x" class="x">heading 2</h1>
+    <h1 id="x" class="x1">heading 3</h1>
+    <h1 id="x" class="x1">heading 4</h1>
+
+    <script>
+      // array = [3,4,"hi",["Mayur","WD","14"]];
+
+      // document.write(array[3][0]);
+
+      // arr = document.getElementsByClassName('x');
+
+      //    arr = document.getElementsByTagName('h1');
+
+      // arr =document.getElementById('x');
+      //   arr =  document.querySelector('.x1');
+      // arr =  document.querySelector('#x');
+
+      //   arr = document.querySelectorAll("h1");
+
+      arr = document.querySelectorAll("#x");
+      console.log(arr);
+
+      //   arr1 = document.querySelectorAll(".x1");
+      //   console.log(arr1);
+
+      arr[0].style.color = "red";
+
+      for (y = 0; y < arr.length; y++) {
+        arr[y].style.color = "GREEN";
+      }
+    </script>
+  </body>
+</html>

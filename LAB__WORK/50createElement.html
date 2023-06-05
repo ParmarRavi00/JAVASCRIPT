@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="parent">
+      <p id="child">Para 1</p>
+      <p id="child" class="x">Para 2</p>
+      <p id="child">Para 3</p>
+      <!-- <h1>heading</h1> -->
+    </div>
+
+    <script>
+      div_tag = document.querySelector(".parent");
+      p2_tag = document.querySelector(".x");
+
+      h1_tag = document.createElement("h1"); //<h1></h1>
+
+      txt = document.createTextNode("Heading 123"); // Heading 123
+
+      h1_tag.append(txt); //<h1>Heading 123</h1>
+
+      //   div_tag.append(h1_tag);
+      div_tag.appendChild(h1_tag);
+      //   div_tag.insertBefore(h1_tag, p2_tag);
+    </script>
+  </body>
+</html>
