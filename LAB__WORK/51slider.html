@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img
+        id="x"
+        src="https://img.freepik.com/free-photo/digital-painting-mountain-with-colorful-tree-foreground_1340-25699.jpg?size=626&ext=jpg&ga=GA1.2.342219415.1681719973"
+        alt=""
+        height="450px"
+        width="800px"
+      />
+
+      <img
+        id="x"
+        src="https://img.freepik.com/free-photo/bright-yellow-fire-blazing-against-night-sky-generated-by-ai_188544-11620.jpg?w=826&t=st=1686023004~exp=1686023604~hmac=72c3363b34ea2386dbbcc9d308c3b1763b57f2cee3e2ec8c26e3a2b99c43dc3a"
+        alt=""
+        height="450px"
+        width="800px"
+      />
+
+      <img
+        id="x"
+        src="https://img.freepik.com/free-photo/bottle-with-flowers-flower-it_1340-27075.jpg?w=360&t=st=1686023036~exp=1686023636~hmac=b70448251b76d2869ad4d6701c0d66f04d30c078350835d95fac8abbe70c51b1"
+        alt=""
+        height="450px"
+        width="800px"
+      />
+
+      <img
+        id="x"
+        src="https://img.freepik.com/free-photo/spectral-light-illuminates-transparent-red-colored-red-roses-abstract-flower-art-generative-ai_157027-1729.jpg?w=826&t=st=1686023068~exp=1686023668~hmac=f816aca4c36a0a1ea6696bbfa63d6c737dfb2ce086d1c406d1eaf37b19d3d5ee"
+        alt=""
+        height="450px"
+        width="800px"
+      />
+    </div>
+
+    <script>
+      index = 0;
+
+      function slider() {
+        img_tag = document.querySelectorAll("#x");
+
+        // let i;
+
+        for (i = 0; i < img_tag.length; i++) {
+          img_tag[i].style.display = "none";
+        }
+
+        // console.log(i);
+
+        img_tag[index].style.display = "block";
+
+        index++;
+
+        if (index == 4) {
+          index = 0;
+        }
+
+        setTimeout("slider()", 1000);
+      }
+
+      slider();
+
+      //   console.log(index);
+    </script>
+  </body>
+</html>
