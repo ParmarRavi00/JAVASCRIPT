@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="val1" />
+
+    <input type="text" id="val2" />
+
+    <select name="" id="operation" onchange="cal()">
+      <option value="">---Select Operation---</option>
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+      <option value="%">%</option>
+    </select>
+
+    <input type="text" id="res" />
+
+    <button onclick="cle()">Reset</button>
+
+    <h2 id="err"></h2>
+
+    <script>
+      // val1 = document.getElementById("val1");
+
+      // val2 = document.getElementById("val2");
+
+      // ope = document.getElementById("operation");
+
+      total = "";
+
+      // console.log(val1);
+
+      function cal() {
+        switch (operation.value) {
+          case "+":
+            total = Number(val1.value) + Number(val2.value);
+            break;
+
+          case "-":
+            total = Number(val1.value) - Number(val2.value);
+            break;
+
+          case "*":
+            total = Number(val1.value) * Number(val2.value);
+            break;
+
+          case "/":
+            total = Number(val1.value) / Number(val2.value);
+            break;
+
+          case "%":
+            total = Number(val1.value) % Number(val2.value);
+            break;
+
+          default:
+            document.getElementById("err").innerHTML =
+              "Please Select Operation";
+            break;
+        }
+
+        document.getElementById("res").value = total;
+      }
+
+      function cle() {
+        val1.value = null;
+        val2.value = "";
+        operation.value = "";
+        res.value = "";
+      }
+    </script>
+  </body>
+</html>

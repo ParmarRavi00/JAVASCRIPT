@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .calci {
+        width: 420px;
+        padding: 20px;
+        margin: auto;
+        background-color: rgb(47, 47, 47);
+      }
+
+      .display {
+        height: 100px;
+        color: wheat;
+        font-size: 100px;
+        text-align: right;
+        padding-bottom: 10px;
+      }
+
+      .row2,
+      .row3,
+      .row4,
+      .row5 {
+        height: 80px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .row1 {
+        height: 80px;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 20px;
+        margin-top: 10px;
+      }
+
+      .a,
+      .b,
+      .c,
+      .d,
+      .e {
+        border-radius: 50%;
+        text-align: center;
+        line-height: 80px;
+        font-size: 32px;
+        color: white;
+        background-color: rgb(100, 99, 99);
+        cursor: pointer;
+      }
+
+      .orange {
+        background-color: rgb(243, 160, 6);
+      }
+
+      .light_gray {
+        background-color: rgb(184, 174, 174);
+      }
+
+      .a:first-child {
+        border-radius: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="calci">
+      <div class="display">7745</div>
+
+      <div class="row1">
+        <div class="a light_gray">C</div>
+        <div class="a light_gray">+</div>
+        <div class="a orange">-</div>
+      </div>
+
+      <div class="row2">
+        <div class="b">7</div>
+        <div class="b">8</div>
+        <div class="b">9</div>
+        <div class="b orange">*</div>
+      </div>
+
+      <div class="row3">
+        <div class="c">4</div>
+        <div class="c">5</div>
+        <div class="c">6</div>
+        <div class="c orange">/</div>
+      </div>
+
+      <div class="row4">
+        <div class="d">1</div>
+        <div class="d">2</div>
+        <div class="d">3</div>
+        <div class="d orange">%</div>
+      </div>
+
+      <div class="row5">
+        <div class="e">0</div>
+        <div class="e">00</div>
+        <div class="e">.</div>
+        <div class="e orange">=</div>
+      </div>
+    </div>
+  </body>
+</html>

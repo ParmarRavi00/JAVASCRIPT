@@ -7,73 +7,20 @@
     <title>Document</title>
   </head>
   <body>
-    <input type="text" id="val1" />
-
-    <input type="text" id="val2" />
-
-    <select name="" id="operation" onchange="cal()">
-      <option value="">---Select Operation---</option>
-      <option value="+">+</option>
-      <option value="-">-</option>
-      <option value="*">*</option>
-      <option value="/">/</option>
-      <option value="%">%</option>
-    </select>
-
-    <input type="text" id="res" />
-
-    <button onclick="cle()">Reset</button>
-
-    <h2 id="err"></h2>
-
     <script>
-      // val1 = document.getElementById("val1");
+      x = 10;
 
-      // val2 = document.getElementById("val2");
-
-      // ope = document.getElementById("operation");
-
-      total = "";
-
-      // console.log(val1);
-
-      function cal() {
-        switch (operation.value) {
-          case "+":
-            total = Number(val1.value) + Number(val2.value);
-            break;
-
-          case "-":
-            total = Number(val1.value) - Number(val2.value);
-            break;
-
-          case "*":
-            total = Number(val1.value) * Number(val2.value);
-            break;
-
-          case "/":
-            total = Number(val1.value) / Number(val2.value);
-            break;
-
-          case "%":
-            total = Number(val1.value) % Number(val2.value);
-            break;
-
-          default:
-            document.getElementById("err").innerHTML =
-              "Please Select Operation";
-            break;
+      function reverse() {
+        if (x >= 0) {
+          document.write(x);
+          document.write("<br>");
         }
+        x--;
 
-        document.getElementById("res").value = total;
+        reverse();
       }
 
-      function cle() {
-        val1.value = "";
-        val2.value = "";
-        ope.value = "";
-        res.value = "";
-      }
+      reverse();
     </script>
   </body>
 </html>
