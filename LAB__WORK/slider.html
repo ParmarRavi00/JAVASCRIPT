@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0%;
+        padding: 0%;
+        user-select: none;
+      }
+      .main {
+        width: 648px;
+        height: 420px;
+        border: 2px solid black;
+        margin: auto;
+        position: relative;
+        display: flex;
+        overflow: hidden;
+      }
+
+      .errow {
+        padding: 12px 18px;
+        font-size: 22px;
+        border: 1px solid gray;
+        border-radius: 50%;
+        background-color: rgb(208, 207, 207);
+        cursor: pointer;
+      }
+
+      .back {
+        position: absolute;
+        top: 40%;
+        left: 2%;
+      }
+
+      .next {
+        position: absolute;
+        top: 40%;
+        right: 2%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <img src="https://picsum.photos/id/0/650/420" alt="" />
+      <img src="https://picsum.photos/id/547/650/420" alt="" />
+      <img src="https://picsum.photos/id/7/650/420" alt="" />
+      <img src="https://picsum.photos/id/237/650/420" alt="" />
+
+      <span class="back errow" onclick="slider(-1)"><</span>
+      <span class="next errow" onclick="slider(1)">></span>
+    </div>
+
+    <script>
+      var img_tag = document.getElementsByTagName("img");
+
+      //   console.log(img_tag);
+
+      let showIndex = 0;
+
+      function slider(n) {
+        showIndex = showIndex + n;
+
+        if (showIndex < 0) {
+          showIndex = 3;
+        }
+
+        if (showIndex > 3) {
+          showIndex = 0;
+        }
+
+        for (i = 0; i < img_tag.length; i++) {
+          img_tag[i].style.transform = `translateX(-${showIndex * 100}%)`;
+          img_tag[i].style.transition = "1s";
+        }
+      }
+    </script>
+  </body>
+</html>
