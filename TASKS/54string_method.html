@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // slice(startIndex,EndIndex):==> u can work with both -ve and +ve index
+
+      // substr(Index,length)==>: u can work with both -ve and +ve index
+
+      // substring(startIndex,EndIndex) ==> cant accept -ve index
+
+      str = "Om is Happy because Om is Happy...!";
+
+      document.write(str + "<br><br>");
+
+      document.write(str.slice(2) + "<br><br>");
+
+      document.write(str.slice(2, 6) + "<br><br>");
+
+      document.write(str.slice(-1) + "<br><br>");
+
+      //   ------------------------------------------------
+
+      document.write(str + "<br><br>");
+      document.write(str.substring(2) + "<br><br>");
+
+      document.write(str.substring(2, 6) + "<br><br>");
+
+      document.write(str.substring(-1) + "<br><br>"); // -ve value are not allowed
+
+      //   ------------------------------------------------
+
+      document.write(str + "<br><br>");
+
+      document.write(str.substr(2) + "<br><br>");
+      document.write(str.substr(2, 6) + "<br><br>"); // Slice Karya pa6i Je First Character Aavse Tene 0-index Gani tya thi start karse ane tya thi 6-index sudhi Na Character Show thase
+
+      document.write(str.substr(-1) + "<br><br>");
+
+      // *************************************************
+
+      str = "Om is happy because Om is Happy Om Om Om om...!";
+
+      document.write(str + "<br><br>");
+
+      document.write(str.replace("Om", "Mayur") + "<br><br>");
+
+      document.write(str.replace(/oM/i, "Mayur") + "<br><br>");
+
+      document.write(str.replace(/Om/g, "Mayur") + "<br><br>");
+
+      document.write(str.replace(/oM/gi, "Mayur") + "<br><br>");
+    </script>
+  </body>
+</html>

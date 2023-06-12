@@ -15,17 +15,20 @@
       }
 
       .display {
+        width: 100%;
         height: 100px;
         color: wheat;
-        font-size: 100px;
+        background-color: rgb(47, 47, 47);
+        font-size: 80px;
         text-align: right;
         padding-bottom: 10px;
+        outline: none;
       }
 
+      .row1,
       .row2,
       .row3,
-      .row4,
-      .row5 {
+      .row4 {
         height: 80px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -33,10 +36,10 @@
         margin-top: 20px;
       }
 
-      .row1 {
+      .row5 {
         height: 80px;
         display: grid;
-        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 2fr;
         gap: 20px;
         margin-top: 10px;
       }
@@ -66,45 +69,72 @@
       .a:first-child {
         border-radius: 50px;
       }
+
+      .e:last-child {
+        border-radius: 50px;
+      }
     </style>
   </head>
   <body>
     <div class="calci">
-      <div class="display">7745</div>
+      <input type="text" class="display" value="" />
 
       <div class="row1">
-        <div class="a light_gray">C</div>
-        <div class="a light_gray">+</div>
-        <div class="a orange">-</div>
+        <div class="a light_gray" onclick="cle()">C</div>
+        <div class="a light_gray" onclick="ac()">AC</div>
+        <div class="a light_gray" onclick="getval('+')">+</div>
+        <div class="a orange" onclick="getval('-')">-</div>
       </div>
 
       <div class="row2">
-        <div class="b">7</div>
-        <div class="b">8</div>
-        <div class="b">9</div>
-        <div class="b orange">*</div>
+        <div class="b" onclick="getval(7)">7</div>
+        <div class="b" onclick="getval(8)">8</div>
+        <div class="b" onclick="getval(9)">9</div>
+        <div class="b orange" onclick="getval('*')">*</div>
       </div>
 
       <div class="row3">
-        <div class="c">4</div>
-        <div class="c">5</div>
-        <div class="c">6</div>
-        <div class="c orange">/</div>
+        <div class="c" onclick="getval(4)">4</div>
+        <div class="c" onclick="getval(5)">5</div>
+        <div class="c" onclick="getval(6)">6</div>
+        <div class="c orange" onclick="getval('/')">/</div>
       </div>
 
       <div class="row4">
-        <div class="d">1</div>
-        <div class="d">2</div>
-        <div class="d">3</div>
-        <div class="d orange">%</div>
+        <div class="d" onclick="getval(1)">1</div>
+        <div class="d" onclick="getval(2)">2</div>
+        <div class="d" onclick="getval(3)">3</div>
+        <div class="d orange" onclick="getval('%')">%</div>
       </div>
 
       <div class="row5">
-        <div class="e">0</div>
-        <div class="e">00</div>
-        <div class="e">.</div>
-        <div class="e orange">=</div>
+        <div class="e" onclick="getval(0)">0</div>
+        <div class="e" onclick="getval('.')">.</div>
+        <div class="e orange" onclick="calci()">=</div>
       </div>
     </div>
+
+    <script>
+      var inp = document.querySelector(".display");
+
+      inp.value = "";
+      console.log(inp.value);
+
+      function getval(n) {
+        inp.value = inp.value + n;
+      }
+
+      function cle() {
+        inp.value = "";
+      }
+
+      function ac() {
+        inp.value = inp.value.slice(0, -1);
+      }
+
+      function calci() {
+        inp.value = eval(inp.value);
+      }
+    </script>
   </body>
 </html>

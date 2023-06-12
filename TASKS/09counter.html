@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 class="x"></h1>
+
+    <script>
+      var h1_tag = document.querySelector(".x");
+
+      count = 0;
+
+      function counter() {
+        count++;
+        h1_tag.innerHTML = count;
+
+        if (count == "500") {
+          clearInterval(stop);
+        }
+      }
+
+      var stop = setInterval(counter, 10);
+      //   console.log(h1_tag);
+    </script>
+  </body>
+</html>

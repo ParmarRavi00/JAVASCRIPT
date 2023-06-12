@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .main {
+        width: 650px;
+        height: 420px;
+        border: 2px solid black;
+        margin: auto;
+        border-radius: 30px;
+        overflow: hidden;
+      }
+
+      .xyz {
+        animation: ani 1s;
+      }
+
+      @keyframes ani {
+        form {
+          transform: scale(1);
+        }
+        to {
+          transform: scale(1.2);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <img class="xyz" src="https://picsum.photos/id/237/650/420" alt="" />
+      <img class="xyz" src="https://picsum.photos/id/259/650/420" alt="" />
+      <img class="xyz" src="https://picsum.photos/id/299/650/420" alt="" />
+      <img class="xyz" src="https://picsum.photos/id/232/650/420" alt="" />
+    </div>
+
+    <script>
+      img_tag = document.querySelectorAll("img");
+
+      //   console.log(img_tag);
+
+      //   console.log(img_tag.length);
+
+      index = 0;
+
+      function slider() {
+        for (var i = 0; i < img_tag.length; i++) {
+          img_tag[i].style.display = "none";
+        }
+
+        img_tag[index].style.display = "block";
+
+        index++;
+
+        if (index == 4) {
+          index = 0;
+        }
+
+        setTimeout(slider, 1000);
+      }
+
+      slider();
+    </script>
+  </body>
+</html>
