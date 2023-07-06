@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0%;
+        padding: 0%;
+        user-select: none;
+      }
+      .main {
+        width: 648px;
+        height: 420px;
+        border: 2px solid black;
+        margin: auto;
+        position: relative;
+        display: flex;
+        overflow: hidden;
+        border-radius: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <img src="https://picsum.photos/id/0/650/420" alt="" />
+      <img src="https://picsum.photos/id/547/650/420" alt="" />
+      <img src="https://picsum.photos/id/7/650/420" alt="" />
+      <img src="https://picsum.photos/id/237/650/420" alt="" />
+    </div>
+
+    <script>
+      const imgTags = document.getElementsByTagName("img");
+      let showIndex = 0;
+      let timer;
+
+      function slide(n) {
+        clearTimeout(timer);
+        showIndex += n;
+
+        if (showIndex < 0) {
+          showIndex = imgTags.length - 1;
+        }
+
+        if (showIndex >= imgTags.length) {
+          showIndex = 0;
+        }
+
+        for (let i = 0; i < imgTags.length; i++) {
+          imgTags[i].style.transform = `translateX(-${showIndex * 100}%)`;
+          imgTags[i].style.transition = "1s";
+        }
+
+        timer = setTimeout(() => {
+          slide(1);
+        }, 3000);
+      }
+
+      slide(1); // Start the auto slide on page load
+    </script>
+  </body>
+</html>
