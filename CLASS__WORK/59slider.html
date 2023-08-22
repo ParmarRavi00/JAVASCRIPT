@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        div 
+        {
+            overflow: hidden;
+        }
+        .xyz 
+        {
+            animation: scaleMe 1s;
+        }
+        @keyframes scaleMe 
+        {
+            from{transform: scale(1);}
+            to{transform: scale(1.5);}
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="https://media.zigcdn.com/media/model/2022/Jul/right-side-view-1797732104_930x620.jpg" alt="" class="x" width="100%" height="300px">
+
+    <img src="https://bd.gaadicdn.com/processedimages/keeway/benda-v302c/640X309/benda-v302c630dda98edc3e.jpg" alt="" class="x" width="100%" height="300px">
+
+    <img src="https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/News/TVS%20Ronin%20Final.jpg&c=0" alt="" class="x" width="100%" height="300px">
+
+    <img src="https://c.ndtvimg.com/2022-03/4a2qrcio_bike_625x300_07_March_22.jpg" alt="" class="x" width="100%" height="300px">
+    </div>
+
+
+        <script>
+index=0;
+            function slider()
+            {
+                
+                    
+
+                    img_arr = document.getElementsByClassName("x");
+                    console.log(img_arr);
+
+                // img_arr[0].style.display ="none";
+                // img_arr[1].style.display ="none";
+                // img_arr[2].style.display ="none";
+                // img_arr[3].style.display ="none";
+
+                // for(let i=0;i<img_arr.length;i++)
+                // {
+                //     img_arr[i].style.display ="none";
+                // }
+
+            // console.log(i);// npot defined ERROR
+
+            let i;
+                for(i=0;i<img_arr.length;i++)
+                {
+                    img_arr[i].style.display ="none";
+                }
+
+            // console.log(i);//4
+
+            img_arr[index].style.display ="block";
+            img_arr[index].classList.add('xyz');
+            index++;//4
+
+            if(index==4)
+            {
+                index=0;
+            }
+           
+            setTimeout("slider()",1000);
+
+            }
+
+            slider()
+        </script>
+    
+
+
+</body>
+</html>

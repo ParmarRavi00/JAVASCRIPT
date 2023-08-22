@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main 
+        {
+            background: lightblue;
+            /* text-align: center;
+            vertical-align: center; */
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+
+            display: grid;
+            /* justify-content: center;
+            align-content: center; */
+
+            place-items: center;
+            height: 100vh;
+        }
+
+        .calculator 
+        {
+            background: coral;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+        }
+
+        input 
+        {
+            grid-column: span 4;
+            height: 40px;
+            font-size: 24px;
+            font-weight: bold;
+            font-family: cursive;
+            border: none;
+            outline: none;
+            
+        }
+
+        /* input:focus 
+        {
+            
+        } */
+
+        .symbol 
+        {
+            background: gray;
+            margin: 20px;
+            height: 40px;
+            width: 40px;
+            text-align: center;
+            line-height: 40px;
+            font-size: 18x;
+            font-weight: bold;
+            font-family: cursive;
+
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="main">
+        <div class="calculator">
+            <input type="text" id="screen">
+
+            <div class="symbol" onclick="del()">DEL</div>
+            <div class="symbol" onclick="wipe()">AC</div>
+            <div class="symbol" onclick="getVal('%')">%</div>
+            <div class="symbol" onclick="getVal('/')">/</div>
+
+            <div class="symbol" onclick="getVal('7')">7</div>
+            <div class="symbol" onclick="getVal('8')">8</div>
+            <div class="symbol" onclick="getVal('9')">9</div>
+            <div class="symbol" onclick="getVal('*')">*</div>
+
+            <div class="symbol" onclick="getVal('4')">4</div>
+            <div class="symbol" onclick="getVal('5')">5</div>
+            <div class="symbol" onclick="getVal('6')">6</div>
+            <div class="symbol" onclick="getVal('+')">+</div>
+
+            <div class="symbol" onclick="getVal('1')">1</div>
+            <div class="symbol" onclick="getVal('2')">2</div>
+            <div class="symbol" onclick="getVal('3')">3</div>
+            <div class="symbol" onclick="getVal('-')">-</div>
+
+            <div class="symbol" onclick="getVal('0')">0</div>
+            <div class="symbol" onclick="calc()">=</div>
+            
+
+
+
+        </div>
+    </div>
+
+
+    <script>
+
+
+    op = document.getElementById('screen');
+
+    
+    op.value="";
+
+    function del()
+    {
+        op.value= op.value.slice(0,-1);
+    }
+
+    function wipe()
+    {
+        op.value="";
+    }
+
+    function getVal(n)///
+    {
+        op.value =op.value + n;// 
+
+      
+    }
+
+    function calc()
+    {
+        op.value = eval(op.value);
+    }
+
+
+
+    </script>
+    
+</body>
+</html>

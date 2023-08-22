@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    Name: <input type="text" name="" id="nm">
+    <span id="nmErr"></span>
+
+    <input type="submit" onclick=" validate()">
+
+    <script>
+        nm_tag = document.getElementById('nm');
+        span_tag = document.getElementById('nmErr');
+
+       
+
+    //    nm_exp = /^[a-zA-Z]+$/;
+
+    nm_exp=  /^[a-zA-z]{3,5}$/;
+
+
+        function validate()
+        {
+            if(nm_tag.value =="")
+            {
+                span_tag.innerHTML =" name??";
+                span_tag.style.color ="red";
+            }
+
+            else if(!nm_exp.test(nm_tag.value))
+            {
+                span_tag.innerHTML =" min 3 and max 5 letter??";
+            }
+
+            else 
+            {
+                span_tag.innerHTML ="";
+            }
+
+
+          
+
+        }
+    </script>
+    
+</body>
+</html>
+
+
+
+

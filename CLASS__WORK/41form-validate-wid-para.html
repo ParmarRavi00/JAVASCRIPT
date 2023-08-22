@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    Name: <input type="text" id="nm" onblur="getTags(nm,nmErr)">
+    <span id="nmErr"></span><br><br>
+
+    Email: <input type="text" id="em" onblur="getTags(em,emErr)">
+    <span id="emErr"></span>
+
+
+    <script>
+        function getTags(e,e1)
+        {
+            console.log(e);
+            console.log(e.value);
+            console.log(e1);
+            console.log(e1.innerHTML);
+
+            if(e.value =='')
+            {
+                e1.innerHTML ="*Required...!";
+            }
+            else 
+            {
+                e1.innerHTML="";
+            }
+        }
+     
+    </script>
+    
+</body>
+</html>

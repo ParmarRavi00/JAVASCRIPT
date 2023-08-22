@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Enter Choice: <input type="text" onblur="getChoice()" id="inp"> -->
+
+    <!-- Enter Choice: <input type="text" onchange="getChoice()" id="inp"> -->
+
+    Enter Choice: <input type="text" onkeyup="getChoice()" id="inp">
+
+    <h2 id="res"></h2>
+
+    <script>
+
+        input_tag = document.getElementById('inp');
+        h2_tag = document.getElementById('res');
+  
+
+         choice = input_tag.value;
+         
+    
+    function getChoice()
+    {
+        console.log( input_tag.value);
+        choice = Number(input_tag.value);
+        switch(choice)
+        {
+        case 1: h2_tag.innerHTML = ("case 1...!");
+        break;
+
+        case 2: h2_tag.innerHTML = ("case 2...!");
+        break;
+
+        case 3: h2_tag.innerHTML = ("case 3...!");
+        break;
+
+        case 4:h2_tag.innerHTML = ("case 4...!");
+        break;
+
+        default: h2_tag.innerHTML = ("Invalid case...!");
+        
+        }
+    }
+    </script>
+    
+</body>
+</html>

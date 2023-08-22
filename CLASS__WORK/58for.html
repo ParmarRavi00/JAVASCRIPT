@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        arr = [23,45,67];
+
+       // document.write(arr);//23,45,67
+        //  document.write(arr.length);
+        // for(start=0;start<arr.length;start++)
+        // {
+        //     document.write(arr[start]);
+        //     document.write("<br>");
+        // }
+
+
+        // for(kaiPan in arr)
+        // {
+        //     // document.write(kaiPan);//index
+        //     document.write(arr[kaiPan]);
+        //     document.write("<br>");
+        // }
+
+        
+        // for(kaiPan of arr)
+        // {
+        //      document.write(kaiPan);//values
+            
+        //     document.write("<br>");
+        // }
+
+        arr1 = ["name",23,"WD"];
+
+        arr1.push("Karan");
+
+    document.write(arr1);
+    document.write("<br>");
+    document.write("<br>");
+
+
+        arr = [2,4,6];
+        arr.forEach(kaiPan);
+        function kaiPan(val,keys)
+        {
+             document.write(val);
+             document.write("<br> <br>");
+            // document.write(keys);
+            // document.write("<br>");
+            
+        }
+
+        obj = {"3":"Om","uiewy":23};
+
+        for(y in obj)
+        {
+            //document.write(y);//index
+            document.write(obj[y])
+        }
+
+      
+
+        // for(y1 of obj)(!--obj not iterable...ERROR)
+        // {
+        //     document.write(y1);//values
+        // }
+
+
+
+
+
+    </script>
+
+    
+</body>
+</html>

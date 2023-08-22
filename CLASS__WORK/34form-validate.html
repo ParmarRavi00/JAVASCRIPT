@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <form action="">
+    Name: <input type="text" id="nm"  >
+    <span id="nmErr"></span>
+    <br><br>
+
+    Password: <input type="text" id="pwd">
+    <span id="emErr"></span>
+    <br><br>
+    Confirm Password: <input type="text" id="cpwd"><br><br>
+
+    <input type="submit" value="Validate" onclick="return validate()">
+  </form>
+
+    <script>
+        name1 = document.getElementById('nm');
+        nmSpan = document.getElementById('nmErr');
+        emSpan = document.getElementById('emErr');
+        pass = document.getElementById('pwd');
+        cpass = document.getElementById('cpwd');
+
+
+
+        console.log(name1);
+        console.log(name1.value);
+
+        function validate()
+        {
+            if(name1.value=="")
+            {
+                // alert("name is required...!");
+                nmSpan.innerHTML ="*Name is required..!";
+                nmSpan.style.color ="red";          
+                return false;
+            }
+
+            else 
+            {
+                nmSpan.innerHTML ="";
+            }
+            if(pass.value=="")
+            {
+                // alert("Password is required...!");
+                emSpan.innerHTML ="*Password is required..!";
+                emSpan.style.color ="red";   
+                return false;
+            }
+            else 
+            {
+                emSpan.innerHTML ="";
+               
+            }
+            if(pass.value!=cpass.value)
+            {
+                alert("Passwords do not match...!");
+                return false;
+            }
+        }
+      
+        // alert("name is required...!");
+
+
+    </script>
+
+    
+</body>
+</html>
