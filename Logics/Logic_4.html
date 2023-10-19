@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Accept 5 Subject Marks and Find Percentage
+
+      var Maths = prompt("Maths : ");
+      var Science = prompt("Science : ");
+      var Social = prompt("Social : ");
+      var Physics = prompt("Physics : ");
+      var Chamstry = prompt("Chamstry : ");
+
+      var TotalMarks =
+        Number(Maths) +
+        Number(Science) +
+        Number(Social) +
+        Number(Physics) +
+        Number(Chamstry);
+
+      var Percentage = TotalMarks / 5;
+
+      document.write(Percentage);
+    </script>
+  </body>
+</html>

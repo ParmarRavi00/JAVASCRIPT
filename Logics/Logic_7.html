@@ -7,11 +7,13 @@
   </head>
   <body>
     <script>
-      // Accept Name From User and Print Only First 3 Latters
+      //Convert Fahrenheit to Celsius
 
-      var name = prompt("");
+      var Fahrenheit = prompt("Enter Value : ");
 
-      document.write(name[0], name[1], name[2]);
+      var Find = (Number(Fahrenheit - 32) * 5) / 9;
+
+      document.write("Celsius : ", Find);
     </script>
   </body>
 </html>
