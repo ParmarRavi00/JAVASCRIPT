@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const unitcharge = prompt("Please Enter Units : ");
+
+      if (unitcharge <= 50) {
+        totalbill = unitcharge * 0.5;
+      } else if (unitcharge <= 150) {
+        totalbill = 50 * 0.5 + (unitcharge - 50) * 0.75;
+      } else if (unitcharge <= 250) {
+        totalbill = 50 * 0.5 + 100 * 0.75 + (unitcharge - 150) * 1.2;
+      } else {
+        totalbill =
+          50 * 0.5 + 100 * 0.75 + 100 * 1.2 + (unitcharge - 250) * 1.5;
+      }
+
+      totalbill = totalbill + 0.2 * totalbill;
+
+      document.write("Total electricity billv : Rs. " + totalbill);
+    </script>
+  </body>
+</html>
