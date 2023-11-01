@@ -6,6 +6,22 @@
     <title>Document</title>
   </head>
   <body>
-    <script></script>
+    <script>
+      let a = parseInt(prompt("Enter the first number:"));
+      let b = parseInt(prompt("Enter the second number:"));
+
+      document.write("Before swapping:" + "</br>");
+      document.write("a =", a + "</br>");
+      document.write("b =", b + "</br>");
+
+      // Swapping without a third variable
+      a = a + b;
+      b = a - b;
+      a = a - b;
+
+      document.write("After swapping:" + "</br>");
+      document.write("a =", a + "</br>");
+      document.write("b =", b);
+    </script>
   </body>
 </html>
