@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="val1" value="" />
+    <input type="text" id="val2" />
+
+    <button onclick="Check()">Test</button>
+
+    <script>
+      const val1 = document.getElementById("val1").value;
+
+      const Multi = val1 * val1;
+
+      const val2 = document.getElementById("val1").value;
+
+      function Check() {
+        if (Multi == val2) {
+          alert("This are Currect...!");
+        } else {
+          alert("This are not Currect...!");
+        }
+      }
+
+      //   console.log(val1);
+    </script>
+  </body>
+</html>
