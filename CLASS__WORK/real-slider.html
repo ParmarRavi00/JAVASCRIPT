@@ -1,78 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
     <style>
-        .box{
-            width: 600px;
-            height: 400px;
-            border: 1px solid black;
-            margin: 77px auto;
-            display: flex;
-            overflow: hidden;
-            position: relative;
-            border-radius: 50px;
-        }
-        img{
-            width: 100%;
-            height: 100%;
-        }
-        .arrow{
-            cursor: pointer;
-            color: black;
-            background-color: rgba(255, 255, 255, 0.695);
-            border-radius: 50%;
-            font-size: 25px;
-            font-weight: bold;
-            position: absolute;
-            padding: 8px 20px;
-            top: 45%;
-        }
-        .prev{
-            left: 10px;
-        }
-        .next{
-            right: 10px;
-        }
-        *{
-            user-select: none;
-        }
+      .box {
+        width: 600px;
+        height: 400px;
+        border: 1px solid black;
+        margin: 77px auto;
+        display: flex;
+        overflow: hidden;
+        position: relative;
+        border-radius: 50px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      .arrow {
+        cursor: pointer;
+        color: black;
+        background-color: rgba(255, 255, 255, 0.695);
+        border-radius: 50%;
+        font-size: 25px;
+        font-weight: bold;
+        position: absolute;
+        padding: 8px 20px;
+        top: 45%;
+      }
+      .prev {
+        left: 10px;
+      }
+      .next {
+        right: 10px;
+      }
+      * {
+        user-select: none;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="box">
-        <img src="https://picsum.photos/id/137/500/300" alt="">
-        <img src="https://picsum.photos/id/237/500/300" alt="">
-        <img src="https://picsum.photos/id/337/500/300" alt="">
-        <img src="https://picsum.photos/id/437/500/300" alt="">
-        <img src="https://picsum.photos/id/537/500/300" alt="">
-        <span class="arrow prev" onclick="slideImages(-1)">&#10094;</span>
-        <span class="arrow next" onclick="slideImages(1)">&#10095;</span>
+      <img src="https://picsum.photos/id/137/500/300" alt="" />
+      <img src="https://picsum.photos/id/237/500/300" alt="" />
+      <img src="https://picsum.photos/id/337/500/300" alt="" />
+      <img src="https://picsum.photos/id/437/500/300" alt="" />
+      <img src="https://picsum.photos/id/537/500/300" alt="" />
+      <span class="arrow prev" onclick="slideImages(-1)">&#10094;</span>
+      <span class="arrow next" onclick="slideImages(1)">&#10095;</span>
     </div>
-  <script>
-     let img_arr = document.querySelectorAll('.box img');
-        let currentIndex = 0;
-    function slideImages(n) {
-    currentIndex = currentIndex + n;
+    <script>
+      let img_arr = document.querySelectorAll("img");
 
-    if (currentIndex < 0) {
-        currentIndex = img_arr.length - 1;
-        img_arr[currentIndex].style.transition = "none";
-    } 
-    else if (currentIndex >= img_arr.length) {
-            currentIndex = 0;
-    }
+      //   console.log(img_arr);
 
-    for (let i = 0; i < img_arr.length; i++) {
-        img_arr[i].style.transform = `translateX(-${currentIndex * 100}%)`;
-        img_arr[i].style.transition = "1s";
-    }
-}
+      let currentIndex = 0;
+      function slideImages(n) {
+        currentIndex = currentIndex + n;
 
-  </script>
-</body>
+        if (currentIndex < 0) {
+          currentIndex = img_arr.length - 1;
+          //   img_arr[currentIndex].style.transition = "none";
+        } else if (currentIndex >= img_arr.length) {
+          currentIndex = 0;
+        }
+
+        for (let i = 0; i < img_arr.length; i++) {
+          img_arr[i].style.transform = `translateX(-${currentIndex * 100}%)`;
+          img_arr[i].style.transition = "1s";
+        }
+      }
+    </script>
+  </body>
 </html>
